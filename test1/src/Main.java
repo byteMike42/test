@@ -27,6 +27,8 @@ public class Main {
                 break;
         }
 
+        System.out.println("This is a test to pull data via github");   
+
     }
 
 }
