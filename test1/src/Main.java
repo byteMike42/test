@@ -12,12 +12,30 @@ public class Main {
         switch(selection){
             case 1:
                 System.out.println("Mars Rover Program ");
+                for (int i = 0; i <10; i++){
+                    System.out.println("WAll-E booting in " + i + " seconds");
+                }
                 break;
             case 2:
                 System.out.println("Jupiter Europa Program");
+                for (int countdown = 10; countdown >= 0; countdown--){
+                    System.out.println("T-minus" + countdown);
+                    if (countdown == 0){
+                        System.out.println("CLEAR FOR LIFTOFF");
+                        break;
+                    }
+                }
                 break;
             case 3:
                 System.out.println("Mercury Probe");
+                Scanner answer = new Scanner(System.in);
+                int choice;
+                int password = 123;
+                do{
+                    System.out.println("What is the password to enter the probe? ");
+                    choice = answer.nextInt();
+                }while(choice != password);
+                System.out.println("Welcome to the mission, Sir Bentley!");
                 break;
             case 0:
                 System.out.println("Exit");
@@ -25,10 +43,8 @@ public class Main {
             default:
                 System.out.println("Not a selected Space Program");
                 break;
+
         }
-
-        System.out.println("This is a test to pull data via github");   
-
     }
-
 }
+
